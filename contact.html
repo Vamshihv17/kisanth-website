@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/main.js" defer></script>
+
+<style>
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+</head>
+
+<body class="bg-gradient-to-b from-yellow-50 to-orange-50">
+
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="relative h-[50vh] flex items-center justify-center text-white text-center">
+
+<img src="images/main.jpeg"
+class="absolute w-full h-full object-cover">
+
+<div class="absolute bg-black bg-opacity-50 w-full h-full"></div>
+
+<div class="relative z-10">
+<h1 class="text-4xl md:text-5xl font-bold mb-2">
+Contact KISANTH
+</h1>
+<p class="text-lg">
+Freshness Straight from Farmers
+</p>
+</div>
+
+</section>
+
+<!-- CONTENT -->
+<section class="max-w-6xl mx-auto p-6 space-y-16">
+
+<div class="grid md:grid-cols-2 gap-10">
+
+<!-- LEFT SIDE -->
+<div class="space-y-6 fade">
+
+<h2 class="text-3xl font-bold text-orange-600">Get in Touch</h2>
+
+<p class="text-gray-700">
+We are happy to assist you with orders, enquiries, and bulk purchases.
+Reach out to us directly or send us a message.
+</p>
+
+<div class="bg-white p-6 rounded-xl shadow space-y-4">
+
+<div>
+<p class="font-semibold">📞 Phone</p>
+<p class="text-gray-700">+91 XXXXX XXXXX</p>
+</div>
+
+<div>
+<p class="font-semibold">📧 Email</p>
+<p class="text-gray-700">your@email.com</p>
+</div>
+
+<div>
+<p class="font-semibold">📍 Farm Location</p>
+<p class="text-gray-700">[Village / District / State]</p>
+</div>
+
+<div>
+<p class="font-semibold">📦 Delivery</p>
+<p class="text-gray-700">
+Local delivery and bulk orders available directly from our farm.
+</p>
+</div>
+
+<div>
+<p class="font-semibold">⏰ Working Hours</p>
+<p class="text-gray-700">Daily: 8:00 AM – 8:00 PM</p>
+</div>
+
+</div>
+
+<!-- QUICK ACTION -->
+<div class="bg-orange-500 text-white p-6 rounded-xl shadow text-center">
+<p class="font-semibold mb-2">Quick Order via Phone</p>
+<p class="text-lg">Call Now & Book Fresh Mangoes</p>
+</div>
+
+</div>
+
+<!-- RIGHT SIDE (FORM) -->
+<div class="bg-white p-6 rounded-xl shadow fade">
+
+<h2 class="text-2xl font-bold mb-4">Send Us a Message</h2>
+
+<form id="contactForm" class="space-y-4">
+
+<input type="text" placeholder="Your Name"
+class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" required>
+
+<input type="tel" placeholder="Phone Number"
+class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" required>
+
+<input type="email" placeholder="Email Address"
+class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-orange-400">
+
+<textarea placeholder="Your Message"
+class="w-full border border-gray-300 p-3 rounded h-32 focus:outline-none focus:ring-2 focus:ring-orange-400"></textarea>
+
+<button class="w-full bg-orange-500 text-white py-3 rounded hover:bg-orange-600 transition">
+Send Message
+</button>
+
+</form>
+
+<p id="successMsg" class="hidden text-green-600 mt-4 text-center">
+✅ Message sent successfully! We will contact you soon.
+</p>
+
+</div>
+
+</div>
+
+<!-- CTA -->
+<div class="text-center fade">
+
+<p class="text-xl font-semibold mb-4">
+Experience the taste of truly natural mangoes
+</p>
+
+<a href="order.html"
+class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600">
+Order Fresh Mangoes
+</a>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a href="https://wa.me/91XXXXXXXXXX"
+class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600">
+💬 WhatsApp
+</a>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+e.preventDefault();
+document.getElementById("successMsg").classList.remove("hidden");
+});
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

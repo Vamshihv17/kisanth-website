@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/main.js" defer></script>
+
+<style>
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+</head>
+
+<body class="bg-gradient-to-b from-yellow-50 to-orange-50">
+
+<div id="header"></div>
+
+<!-- HERO SECTION -->
+<section class="relative h-[60vh] flex items-center justify-center text-center text-white">
+
+<img src="images/main.jpeg"
+class="absolute w-full h-full object-cover">
+
+<div class="absolute bg-black bg-opacity-50 w-full h-full"></div>
+
+<div class="relative z-10">
+<h1 class="text-5xl font-bold mb-4">About KISANTH</h1>
+<p class="text-xl">Naturally Sweet. Honestly Fresh.</p>
+</div>
+
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="max-w-6xl mx-auto p-6 space-y-16">
+
+<!-- STORY -->
+<div class="grid md:grid-cols-2 gap-10 items-center fade">
+
+<div>
+<h2 class="text-3xl font-bold mb-4 text-orange-600">
+Our Story
+</h2>
+
+<p class="mb-4 text-gray-700">
+We are a friends-run farm business rooted in strong farming traditions, bringing together practical farming experience and professional expertise.
+</p>
+
+<p class="mb-4 text-gray-700">
+With educational backgrounds in Agricultural Marketing and Supply Chain Management, we understand both the science of farming and the importance of delivering fresh produce efficiently.
+</p>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+class="rounded-xl shadow-lg">
+
+</div>
+
+<!-- GOAL -->
+<div class="grid md:grid-cols-2 gap-10 items-center fade">
+
+<img src="https://images.unsplash.com/photo-1574226516831-e1dff420e43e"
+class="rounded-xl shadow-lg md:order-1">
+
+<div class="md:order-2">
+<h2 class="text-3xl font-bold mb-4 text-orange-600">
+Our Mission
+</h2>
+
+<p class="mb-4 text-gray-700 font-medium">
+Our goal is simple:
+</p>
+
+<p class="text-gray-700">
+To deliver fresh, naturally ripened mangoes directly from our orchard to your home.
+</p>
+
+<p class="mt-4 text-gray-700">
+Unlike mass-market fruit, our mangoes are grown with care, harvested at the right maturity, and ripened naturally to preserve their authentic taste and nutritional value.
+</p>
+
+</div>
+
+</div>
+
+<!-- PROMISE -->
+<div class="fade">
+
+<h2 class="text-3xl font-bold text-center mb-10 text-orange-600">
+Our Promise
+</h2>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+<div class="text-3xl mb-3">🌿</div>
+<p>Farm-fresh mangoes directly from orchard</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+<div class="text-3xl mb-3">🍃</div>
+<p>Naturally ripened — no artificial chemicals</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+<div class="text-3xl mb-3">🤝</div>
+<p>Transparent sourcing and fair pricing</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+<div class="text-3xl mb-3">📦</div>
+<p>Carefully packed for maximum freshness</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- FINAL MESSAGE -->
+<div class="text-center mt-12 fade">
+
+<p class="text-xl font-semibold mb-4">
+From our farm to your table
+</p>
+
+<p class="text-orange-600 text-2xl font-bold">
+Pure, authentic mango goodness.
+</p>
+
+<a href="order.html"
+class="inline-block mt-6 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600">
+Order Now
+</a>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

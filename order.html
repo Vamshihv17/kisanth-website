@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/main.js" defer></script>
+</head>
+
+<body class="bg-gradient-to-b from-yellow-50 to-orange-50">
+
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="text-center py-10">
+<h1 class="text-4xl font-bold mb-2">Order Fresh Mangoes</h1>
+<p class="text-gray-600">Farm Fresh • Naturally Ripened • Delivered with Care</p>
+</section>
+
+<!-- ORDER SECTION -->
+<section class="max-w-5xl mx-auto p-6 grid md:grid-cols-2 gap-10">
+
+<!-- LEFT SIDE (PRODUCT INFO) -->
+<div class="space-y-6">
+
+<div class="bg-white p-6 rounded-xl shadow">
+<h2 class="text-2xl font-bold mb-4 text-orange-600">Available Mangoes</h2>
+
+<ul class="space-y-3 text-gray-700">
+<li>🥭 Alphonso – Premium sweetness & rich aroma</li>
+<li>🥭 Mallika – High nutrition & pulp content</li>
+<li>🥭 Banganapalli – Classic taste & firm texture</li>
+<li>🥭 Kesar – Saffron flavor & smooth pulp</li>
+<li>🥭 Himampasand – Royal taste & unique flavor</li>
+</ul>
+</div>
+
+<div class="bg-orange-500 text-white p-6 rounded-xl shadow text-center">
+<p class="font-semibold text-lg">🚚 Fresh Delivery</p>
+<p>Direct from farm to your doorstep</p>
+</div>
+
+</div>
+
+<!-- RIGHT SIDE (FORM) -->
+<div class="bg-white p-6 rounded-xl shadow">
+
+<h2 class="text-2xl font-bold mb-4">Place Your Order</h2>
+
+<form id="orderForm" class="space-y-4">
+
+<input id="name" type="text" placeholder="Your Name"
+class="w-full border p-3 rounded" required>
+
+<input id="phone" type="tel" placeholder="Phone Number"
+class="w-full border p-3 rounded" required>
+
+<select id="mango" class="w-full border p-3 rounded">
+<option>Alphonso</option>
+<option>Mallika</option>
+<option>Banganapalli</option>
+<option>Kesar</option>
+<option>Himampasand</option>
+</select>
+
+<input id="quantity" type="number" placeholder="Quantity (Kg)"
+class="w-full border p-3 rounded">
+
+<textarea id="address" placeholder="Delivery Address"
+class="w-full border p-3 rounded"></textarea>
+
+<button class="w-full bg-orange-500 text-white py-3 rounded hover:bg-orange-600">
+Place Order
+</button>
+
+</form>
+
+<p id="successMsg" class="hidden text-green-600 text-center mt-4">
+✅ Order submitted! We will contact you shortly.
+</p>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<!-- WHATSAPP AUTO ORDER SCRIPT -->
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let mango = document.getElementById("mango").value;
+let qty = document.getElementById("quantity").value;
+let address = document.getElementById("address").value;
+
+let message = `New Order:%0AName: ${name}%0APhone: ${phone}%0AMango: ${mango}%0AQuantity: ${qty} Kg%0AAddress: ${address}`;
+
+window.open(`https://wa.me/91XXXXXXXXXX?text=${message}`);
+
+document.getElementById("successMsg").classList.remove("hidden");
+});
+</script>
+
+</body>
+</html>

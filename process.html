@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/main.js" defer></script>
+
+<style>
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+</head>
+
+<body class="bg-gradient-to-b from-yellow-50 to-orange-50">
+
+<div id="header"></div>
+
+<section class="max-w-5xl mx-auto p-6 text-center">
+
+<h1 class="text-4xl font-bold mb-4">
+Our Farm to Home Process
+</h1>
+
+<p class="text-gray-600 mb-12">
+How Your Mangoes Reach You — Fresh, Natural, and Carefully Delivered
+</p>
+
+<div class="relative">
+
+<!-- vertical line -->
+<div class="hidden md:block absolute left-1/2 top-0 w-1 bg-orange-300 h-full transform -translate-x-1/2"></div>
+
+<div class="space-y-16">
+
+<!-- STEP 1 -->
+<div class="md:grid md:grid-cols-2 gap-8 items-center fade">
+
+<div class="bg-white p-6 rounded-xl shadow text-left md:text-right">
+<h3 class="text-xl font-bold text-orange-600">Farm Harvest</h3>
+<p>
+Hand-picked mature mangoes directly from our orchards at the perfect stage of ripeness to ensure natural sweetness and quality.
+</p>
+</div>
+
+<div class="flex justify-center">
+<div class="bg-orange-500 text-white w-14 h-14 flex items-center justify-center rounded-full text-xl shadow">
+🌿
+</div>
+</div>
+
+</div>
+
+<!-- STEP 2 -->
+<div class="md:grid md:grid-cols-2 gap-8 items-center fade">
+
+<div class="flex justify-center md:order-2">
+<div class="bg-orange-500 text-white w-14 h-14 flex items-center justify-center rounded-full text-xl shadow">
+☀️
+</div>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow text-left md:order-1">
+<h3 class="text-xl font-bold text-orange-600">Natural Ripening</h3>
+<p>
+Traditional ripening methods are used without harmful chemicals, preserving the fruit’s authentic taste, aroma, and nutrition.
+</p>
+</div>
+
+</div>
+
+<!-- STEP 3 -->
+<div class="md:grid md:grid-cols-2 gap-8 items-center fade">
+
+<div class="bg-white p-6 rounded-xl shadow text-left md:text-right">
+<h3 class="text-xl font-bold text-orange-600">Quality Sorting</h3>
+<p>
+Every mango is carefully inspected to ensure only the best fruits reach you — uniform ripeness, size, and quality guaranteed.
+</p>
+</div>
+
+<div class="flex justify-center">
+<div class="bg-orange-500 text-white w-14 h-14 flex items-center justify-center rounded-full text-xl shadow">
+✅
+</div>
+</div>
+
+</div>
+
+<!-- STEP 4 -->
+<div class="md:grid md:grid-cols-2 gap-8 items-center fade">
+
+<div class="flex justify-center md:order-2">
+<div class="bg-orange-500 text-white w-14 h-14 flex items-center justify-center rounded-full text-xl shadow">
+📦
+</div>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow text-left md:order-1">
+<h3 class="text-xl font-bold text-orange-600">Careful Packaging</h3>
+<p>
+Mangoes are packed with protective layers to prevent damage and maintain freshness during transit.
+</p>
+</div>
+
+</div>
+
+<!-- STEP 5 -->
+<div class="md:grid md:grid-cols-2 gap-8 items-center fade">
+
+<div class="bg-white p-6 rounded-xl shadow text-left md:text-right">
+<h3 class="text-xl font-bold text-orange-600">Direct Delivery</h3>
+<p>
+Delivered straight from our farm to your doorstep, ensuring maximum freshness and authentic farm taste.
+</p>
+</div>
+
+<div class="flex justify-center">
+<div class="bg-orange-500 text-white w-14 h-14 flex items-center justify-center rounded-full text-xl shadow">
+🚚
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FINAL MESSAGE -->
+<div class="mt-16 text-center fade">
+<h2 class="text-2xl font-bold mb-3">
+Enjoy Fresh Mangoes!
+</h2>
+
+<p class="text-orange-600 font-semibold text-lg">
+Farm Fresh • Naturally Ripened • Delivered with Care
+</p>
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
