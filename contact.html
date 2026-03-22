@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -27,44 +26,35 @@
 <div id="header"></div>
 
 <!-- HERO -->
-<section class="relative h-[50vh] flex items-center justify-center text-white text-center">
+<section class="relative h-[40vh] flex items-center justify-center text-white text-center">
 
-<img src="images/main.jpeg"
+<img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba"
 class="absolute w-full h-full object-cover">
 
 <div class="absolute bg-black bg-opacity-50 w-full h-full"></div>
 
 <div class="relative z-10">
-<h1 class="text-4xl md:text-5xl font-bold mb-2">
-Contact KISANTH
-</h1>
-<p class="text-lg">
-Freshness Straight from Farmers
-</p>
+<h1 class="text-4xl font-bold mb-2">Contact KISANTH</h1>
+<p>Freshness Straight from Farmers</p>
 </div>
 
 </section>
 
 <!-- CONTENT -->
-<section class="max-w-6xl mx-auto p-6 space-y-16">
+<section class="max-w-6xl mx-auto p-6 space-y-12">
 
 <div class="grid md:grid-cols-2 gap-10">
 
 <!-- LEFT SIDE -->
-<div class="space-y-6 fade">
+<div class="bg-white p-6 rounded-xl shadow space-y-4 fade">
 
-<h2 class="text-3xl font-bold text-orange-600">Get in Touch</h2>
+<h2 class="text-2xl font-bold text-orange-600">Get in Touch</h2>
 
-<p class="text-gray-700">
-We are happy to assist you with orders, enquiries, and bulk purchases.
-Reach out to us directly or send us a message.
-</p>
-
-<div class="bg-white p-6 rounded-xl shadow space-y-4">
+<p>We are happy to assist you with orders, enquiries, and bulk purchases.</p>
 
 <div>
 <p class="font-semibold">📞 Phone</p>
-<p class="text-gray-700">+91 XXXXX XXXXX</p>
+<p class="text-gray-700">+91 734 935 1110</p>
 </div>
 
 <div>
@@ -74,14 +64,12 @@ Reach out to us directly or send us a message.
 
 <div>
 <p class="font-semibold">📍 Farm Location</p>
-<p class="text-gray-700">[Village / District / State]</p>
+<p class="text-gray-700">[Your Village / District]</p>
 </div>
 
 <div>
 <p class="font-semibold">📦 Delivery</p>
-<p class="text-gray-700">
-Local delivery and bulk orders available directly from our farm.
-</p>
+<p class="text-gray-700">Direct farm delivery available</p>
 </div>
 
 <div>
@@ -91,15 +79,7 @@ Local delivery and bulk orders available directly from our farm.
 
 </div>
 
-<!-- QUICK ACTION -->
-<div class="bg-orange-500 text-white p-6 rounded-xl shadow text-center">
-<p class="font-semibold mb-2">Quick Order via Phone</p>
-<p class="text-lg">Call Now & Book Fresh Mangoes</p>
-</div>
-
-</div>
-
-<!-- RIGHT SIDE (FORM) -->
+<!-- RIGHT SIDE -->
 <div class="bg-white p-6 rounded-xl shadow fade">
 
 <h2 class="text-2xl font-bold mb-4">Send Us a Message</h2>
@@ -107,25 +87,25 @@ Local delivery and bulk orders available directly from our farm.
 <form id="contactForm" class="space-y-4">
 
 <input type="text" placeholder="Your Name"
-class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" required>
+class="w-full border p-3 rounded" required>
 
 <input type="tel" placeholder="Phone Number"
-class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" required>
+class="w-full border p-3 rounded" required>
 
 <input type="email" placeholder="Email Address"
-class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-orange-400">
+class="w-full border p-3 rounded">
 
 <textarea placeholder="Your Message"
-class="w-full border border-gray-300 p-3 rounded h-32 focus:outline-none focus:ring-2 focus:ring-orange-400"></textarea>
+class="w-full border p-3 rounded h-32"></textarea>
 
-<button class="w-full bg-orange-500 text-white py-3 rounded hover:bg-orange-600 transition">
+<button class="w-full bg-orange-500 text-white py-3 rounded hover:bg-orange-600">
 Send Message
 </button>
 
 </form>
 
 <p id="successMsg" class="hidden text-green-600 mt-4 text-center">
-✅ Message sent successfully! We will contact you soon.
+✅ Message sent successfully!
 </p>
 
 </div>
@@ -133,35 +113,38 @@ Send Message
 </div>
 
 <!-- CTA -->
-<div class="text-center fade">
-
-<p class="text-xl font-semibold mb-4">
+<div class="text-center">
+<p class="text-lg font-semibold mb-4">
 Experience the taste of truly natural mangoes
 </p>
 
 <a href="order.html"
-class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600">
+class="bg-orange-500 text-white px-6 py-3 rounded-lg">
 Order Fresh Mangoes
 </a>
-
 </div>
 
 </section>
 
 <div id="footer"></div>
 
-<!-- WHATSAPP FLOAT BUTTON -->
-<a href="https://wa.me/917349351110"
-class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600">
-💬 WhatsApp
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/917349351110?text=I%20am%20looking%20for%20premium%20mangoes"
+target="_blank"
+class="fixed bottom-5 right-5 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg hover:bg-green-600 flex items-center gap-2">
+
+<span>💬</span> WhatsApp
+
 </a>
 
+<!-- SCRIPT -->
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(e){
 e.preventDefault();
 document.getElementById("successMsg").classList.remove("hidden");
 });
 
+// animation
 const observer = new IntersectionObserver(entries => {
 entries.forEach(entry => {
 if(entry.isIntersecting){
@@ -169,7 +152,6 @@ entry.target.classList.add("show");
 }
 });
 });
-
 document.querySelectorAll('.fade').forEach(el => observer.observe(el));
 </script>
 
