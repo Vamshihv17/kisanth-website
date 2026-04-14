@@ -1,176 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mango Nutrition | Farvine</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="js/main.js" defer></script>
-
-<style>
-.fade {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="components/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        farvine: { 50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d' },
+                    },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <script src="js/main.js" defer></script>
 </head>
 
-<body class="bg-gradient-to-b from-yellow-50 to-orange-50">
+<body class="bg-gray-50 text-gray-800 selection:bg-farvine-200 selection:text-farvine-900 overflow-x-hidden">
 
-<div id="header"></div>
+    <div id="header"></div>
 
-<!-- HERO -->
-<section class="relative h-[50vh] flex items-center justify-center text-white text-center">
+    <!-- HERO -->
+    <section class="relative min-h-[50vh] flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1553279768-865429fa0078" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gray-900/70 backdrop-blur-[2px]"></div>
+        </div>
 
-<img src="https://images.unsplash.com/photo-1553279768-865429fa0078"
-class="absolute w-full h-full object-cover">
+        <div class="relative z-10 fade-up mt-16 px-6">
+            <p class="text-farvine-400 font-bold uppercase tracking-widest text-sm mb-3">Health & Wellness</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Mango Nutrition</h1>
+            <p class="text-lg md:text-xl font-light text-gray-200 max-w-2xl mx-auto">
+                Discover the immense, scientifically-backed health benefits hidden in every bite of our naturally ripened mangoes.
+            </p>
+        </div>
+    </section>
 
-<div class="absolute bg-black bg-opacity-50 w-full h-full"></div>
+    <!-- CONTENT -->
+    <section class="py-24 px-6 max-w-6xl mx-auto space-y-24">
 
-<div class="relative z-10">
-<h1 class="text-4xl md:text-5xl font-bold mb-2">
-Mango Nutrition
-</h1>
-<p class="text-lg">
-Powerful Health Benefits in Every Bite
-</p>
-</div>
+        <!-- INTRO -->
+        <div class="text-center fade-up max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">
+                Referred to as the <b>“King of Fruits”</b>, mangoes not only offer an unparalleled taste experience but also boast a potent nutritional profile rich in antioxidants, essential vitamins, and digestive enzymes.
+            </p>
+        </div>
 
-</section>
+        <!-- BENEFITS GRID -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 fade-up">
+            
+            <div class="bg-white p-8 rounded-3xl shadow-xl shadow-gray-200/40 border border-gray-100 hover:-translate-y-2 transition-transform">
+                <div class="w-14 h-14 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center mb-6">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                </div>
+                <h3 class="font-bold text-xl text-gray-900 mb-3">Heart Health</h3>
+                <p class="text-gray-500 font-light leading-relaxed">Packed with potassium and magnesium that help maintain a healthy pulse and relax blood vessels, balancing blood pressure.</p>
+            </div>
 
-<!-- CONTENT -->
-<section class="max-w-6xl mx-auto p-6 space-y-16">
+            <div class="bg-white p-8 rounded-3xl shadow-xl shadow-gray-200/40 border border-gray-100 hover:-translate-y-2 transition-transform delay-100">
+                <div class="w-14 h-14 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"></path></svg>
+                </div>
+                <h3 class="font-bold text-xl text-gray-900 mb-3">Super Antioxidant</h3>
+                <p class="text-gray-500 font-light leading-relaxed">Contains <b>Mangiferin</b>, known as a 'super antioxidant' which actively protects cells from free radical damage.</p>
+            </div>
 
-<!-- INTRO -->
-<div class="text-center fade">
-<p class="text-lg max-w-3xl mx-auto">
-Mangoes are often called the <b>“King of Fruits”</b> because of their rich taste and powerful nutritional profile.
-They contain unique antioxidants, digestive enzymes, and essential vitamins that support overall health.
-</p>
-</div>
+            <div class="bg-white p-8 rounded-3xl shadow-xl shadow-gray-200/40 border border-gray-100 hover:-translate-y-2 transition-transform delay-200">
+                <div class="w-14 h-14 bg-farvine-50 text-farvine-500 rounded-2xl flex items-center justify-center mb-6">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                </div>
+                <h3 class="font-bold text-xl text-gray-900 mb-3">Eye & Skin Health</h3>
+                <p class="text-gray-500 font-light leading-relaxed">Abundant in Lutein, Zeaxanthin, and Vitamin A which protect your vision against blue light and support glowing skin.</p>
+            </div>
 
-<!-- BENEFITS GRID -->
-<div class="grid md:grid-cols-2 gap-8 fade">
+            <div class="bg-white p-8 rounded-3xl shadow-xl shadow-gray-200/40 border border-gray-100 hover:-translate-y-2 transition-transform">
+                <div class="w-14 h-14 bg-green-50 text-green-500 rounded-2xl flex items-center justify-center mb-6">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.514"></path></svg>
+                </div>
+                <h3 class="font-bold text-xl text-gray-900 mb-3">Digestive Support</h3>
+                <p class="text-gray-500 font-light leading-relaxed">Rich in amylases, enzymes that break down large food molecules so they can be easily absorbed by your body.</p>
+            </div>
 
-<div class="bg-white p-6 rounded-xl shadow">
-<h3 class="font-bold text-lg text-orange-600 mb-2">🛡 Super Antioxidant</h3>
-<p><b>Mangiferin</b> protects cells from inflammation and oxidative stress.</p>
-</div>
+            <div class="bg-white p-8 rounded-3xl shadow-xl shadow-gray-200/40 border border-gray-100 hover:-translate-y-2 transition-transform delay-100 md:col-span-2 lg:col-span-2">
+                <div class="w-14 h-14 bg-purple-50 text-purple-500 rounded-2xl flex items-center justify-center mb-6">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                </div>
+                <h3 class="font-bold text-xl text-gray-900 mb-3">Immunity Booster</h3>
+                <p class="text-gray-500 font-light leading-relaxed">Provides nearly 70% of your daily Vitamin C needs in a single cup, which is crucial for collagen production and increasing your body's white blood cell count to fight off disease.</p>
+            </div>
 
-<div class="bg-white p-6 rounded-xl shadow">
-<h3 class="font-bold text-lg text-orange-600 mb-2">🍽 Digestive Support</h3>
-<p>Natural amylases improve digestion and break down carbohydrates.</p>
-</div>
+        </div>
 
-<div class="bg-white p-6 rounded-xl shadow">
-<h3 class="font-bold text-lg text-orange-600 mb-2">👁 Eye & Skin Health</h3>
-<p>Lutein, zeaxanthin, and Vitamin A support vision and glowing skin.</p>
-</div>
+        <!-- TABLE SECTION -->
+        <div class="bg-white rounded-3xl shadow-xl shadow-gray-200/40 border border-gray-100 overflow-hidden fade-up">
+            
+            <div class="p-8 md:p-12 text-center border-b border-gray-100">
+                <h2 class="text-3xl font-bold text-gray-900 mb-3">Nutritional Profile</h2>
+                <p class="text-gray-500 font-light">Highlights based on one cup (165g) of sliced fresh mango.</p>
+            </div>
 
-<div class="bg-white p-6 rounded-xl shadow">
-<h3 class="font-bold text-lg text-orange-600 mb-2">🧬 Immunity Boost</h3>
-<p>Vitamin C strengthens immunity and boosts white blood cell production.</p>
-</div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="p-5 font-semibold text-gray-900 text-sm uppercase tracking-wider border-b border-gray-200 pl-8">Essential Nutrient</th>
+                            <th class="p-5 font-semibold text-gray-900 text-sm uppercase tracking-wider border-b border-gray-200">% Daily Value</th>
+                            <th class="p-5 font-semibold text-gray-900 text-sm uppercase tracking-wider border-b border-gray-200 pr-8">Primary Benefit</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 text-gray-600">
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="p-5 pl-8 font-medium text-gray-900">Vitamin C</td>
+                            <td class="p-5"><span class="inline-block bg-farvine-100 text-farvine-700 px-3 py-1 rounded-full text-sm font-bold">67%</span></td>
+                            <td class="p-5 pr-8">Immunity & skin health</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="p-5 pl-8 font-medium text-gray-900">Copper</td>
+                            <td class="p-5"><span class="inline-block bg-farvine-50 text-farvine-600 px-3 py-1 rounded-full text-sm font-bold">20%</span></td>
+                            <td class="p-5 pr-8">Red blood cell formation</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="p-5 pl-8 font-medium text-gray-900">Folate (B9)</td>
+                            <td class="p-5"><span class="inline-block bg-farvine-50 text-farvine-600 px-3 py-1 rounded-full text-sm font-bold">18%</span></td>
+                            <td class="p-5 pr-8">DNA synthesis & cell repair</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="p-5 pl-8 font-medium text-gray-900">Vitamin B6</td>
+                            <td class="p-5"><span class="inline-block bg-farvine-50 text-farvine-600 px-3 py-1 rounded-full text-sm font-bold">12%</span></td>
+                            <td class="p-5 pr-8">Brain health metabolism</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="p-5 pl-8 font-medium text-gray-900">Vitamin A</td>
+                            <td class="p-5"><span class="inline-block bg-farvine-50 text-farvine-600 px-3 py-1 rounded-full text-sm font-bold">10%</span></td>
+                            <td class="p-5 pr-8">Vision and immune support</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-<div class="bg-white p-6 rounded-xl shadow md:col-span-2">
-<h3 class="font-bold text-lg text-orange-600 mb-2">❤️ Heart Health</h3>
-<p>Potassium and magnesium help regulate blood pressure and support heart function.</p>
-</div>
+    </section>
 
-</div>
+    <!-- CALL TO ACTION -->
+    <section class="py-24 bg-farvine-500 text-center px-6 fade-up">
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-6">
+            Nourish Your Body
+        </h2>
+        <p class="text-xl text-farvine-100 mb-10 font-light max-w-2xl mx-auto">
+            Experience the natural health benefits of truly chemical-free mangoes. Treat your family to a box today.
+        </p>
+        
+        <a href="order.html" class="glow-on-hover inline-block bg-white text-farvine-600 px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-black/20">
+            Order Fresh Mangoes
+        </a>
+    </section>
 
-<!-- TABLE -->
-<div class="bg-white p-6 rounded-xl shadow fade">
+    <div id="footer"></div>
 
-<h2 class="text-2xl font-bold mb-6 text-center">
-Nutritional Highlights (per cup / 165g)
-</h2>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add("show");
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
 
-<div class="overflow-x-auto">
-<table class="w-full rounded-lg overflow-hidden">
-
-<thead class="bg-orange-500 text-white">
-<tr>
-<th class="p-3">Nutrient</th>
-<th class="p-3">Daily Value</th>
-<th class="p-3">Benefit</th>
-</tr>
-</thead>
-
-<tbody class="text-center">
-
-<tr class="border-b">
-<td class="p-3">Vitamin C</td>
-<td>67%</td>
-<td>Immunity & skin health</td>
-</tr>
-
-<tr class="bg-gray-50 border-b">
-<td class="p-3">Copper</td>
-<td>20%</td>
-<td>Red blood cell formation</td>
-</tr>
-
-<tr class="border-b">
-<td class="p-3">Folate (B9)</td>
-<td>18%</td>
-<td>Cell repair</td>
-</tr>
-
-<tr class="bg-gray-50 border-b">
-<td class="p-3">Vitamin B6</td>
-<td>12–15%</td>
-<td>Brain health</td>
-</tr>
-
-<tr>
-<td class="p-3">Vitamin A</td>
-<td>10%</td>
-<td>Vision support</td>
-</tr>
-
-</tbody>
-</table>
-</div>
-
-</div>
-
-<!-- CTA -->
-<div class="text-center fade">
-
-<p class="text-xl font-semibold mb-4">
-Experience the health benefits of truly natural mangoes
-</p>
-
-<a href="order.html"
-class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600">
-Order Fresh Mangoes
-</a>
-
-</div>
-
-</section>
-
-<div id="footer"></div>
-
-<script>
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-
-document.querySelectorAll('.fade').forEach(el => observer.observe(el));
-</script>
-
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>

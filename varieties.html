@@ -1,178 +1,218 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varieties | Farvine</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="js/main.js" defer></script>
-
-<style>
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="components/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        farvine: { 50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d' },
+                    },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <script src="js/main.js" defer></script>
 </head>
 
-<body class="bg-gradient-to-b from-yellow-50 to-orange-50">
+<body class="bg-gray-50 text-gray-800 selection:bg-farvine-200 selection:text-farvine-900 overflow-x-hidden">
 
-<div id="header"></div>
+    <div id="header"></div>
 
-<section class="max-w-7xl mx-auto p-6 space-y-20">
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        
+        <div class="text-center max-w-3xl mx-auto mb-20 fade-up">
+            <h1 class="text-5xl md:text-6xl font-black text-gray-900 tracking-tight mb-4">
+                Premium Varieties
+            </h1>
+            <p class="text-xl text-gray-500 font-light">
+                Discover the unique flavor profiles and nutritional benefits of our hand-picked mango selection.
+            </p>
+        </div>
 
-<h1 class="text-4xl font-bold text-center mb-10">
-Premium Mango Varieties
-</h1>
+        <div class="space-y-32">
 
-<!-- ================= ALPHONSO ================= -->
-<div class="grid md:grid-cols-2 gap-10 items-stretch fade-up">
+            <!-- ALPHONSO -->
+            <div class="grid md:grid-cols-2 gap-12 items-center fade-up">
+                <div class="order-2 md:order-1 space-y-6">
+                    <div class="inline-block px-3 py-1 bg-farvine-100 text-farvine-700 rounded-full text-sm font-bold uppercase tracking-wide">Most Popular</div>
+                    <h2 class="text-4xl font-bold text-gray-900">Alphonso <span class="text-2xl font-light text-gray-400 block mt-1">The King of Mangoes</span></h2>
+                    
+                    <p class="text-lg text-gray-600 font-light leading-relaxed">
+                        Celebrated globally for its rich, sweet flavor and vibrant color. Grown in mineral-rich laterite soil, this variety packs a nutritional punch unlike any other.
+                    </p>
 
-<div class="flex flex-col justify-center bg-white p-6 rounded-xl shadow">
-<h2 class="text-3xl font-bold text-orange-600 mb-4">
-Alphonso – The King of Mangoes
-</h2>
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-xl shadow-gray-200/40">
+                        <h4 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-farvine-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Nutritional Advantage
+                        </h4>
+                        <ul class="space-y-3 text-gray-600 text-sm">
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Mineral Boost:</b> Superior levels of Magnesium and Manganese for heart health.</p></li>
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Mangiferin:</b> High concentrations protect cells from DNA damage.</p></li>
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Metabolic Synergy:</b> Low Glycemic Index (~51) for steady energy.</p></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="order-1 md:order-2 relative group">
+                    <div class="absolute inset-0 bg-farvine-200 rounded-[2rem] transform rotate-3 scale-105 opacity-50 group-hover:rotate-6 transition duration-500"></div>
+                    <img src="images/alphonso.jpg" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl relative z-10">
+                </div>
+            </div>
 
-<p class="font-semibold mb-3">
-The Alphonso Advantage: A Nutritional Powerhouse
-</p>
+            <!-- MALLIKA -->
+            <div class="grid md:grid-cols-2 gap-12 items-center fade-up">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-yellow-200 rounded-[2rem] transform -rotate-3 scale-105 opacity-50 group-hover:-rotate-6 transition duration-500"></div>
+                    <img src="images/mallika.jpg" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl relative z-10">
+                </div>
 
-<ul class="space-y-2 text-gray-700 text-sm leading-relaxed">
-<li><b>Coastal Mineral Boost:</b> Grown in mineral-rich laterite soil, it contains superior levels of Magnesium and Manganese for heart and bone health.</li>
-<li><b>Unique Mangiferin:</b> High concentrations of this antioxidant protect cells from DNA damage and reduce inflammation.</li>
-<li><b>Natural Eye Protection:</b> Lutein and zeaxanthin help filter harmful blue light.</li>
-<li><b>Metabolic Synergy:</b> Low Glycemic Index (~51) provides steady energy.</li>
-<li><b>Pure Digestive Ease:</b> Creamy fiberless pulp aids smooth digestion.</li>
-</ul>
-</div>
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold text-gray-900">Mallika <span class="text-2xl font-light text-gray-400 block mt-1">Nature’s Multivitamin</span></h2>
+                    
+                    <p class="text-lg text-gray-600 font-light leading-relaxed">
+                        A beautiful hybrid known for its exceptionally sweet taste and prominent citrus and melon notes. It yields a massive amount of fiberless, silky pulp.
+                    </p>
 
-<img src="images/alphonso.jpg"
-class="w-full h-full object-cover rounded-xl shadow">
-</div>
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-xl shadow-gray-200/40">
+                        <h4 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-farvine-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Nutritional Advantage
+                        </h4>
+                        <ul class="space-y-3 text-gray-600 text-sm">
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Vitamin A Powerhouse:</b> Deeply supports eye health and immune defense.</p></li>
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Peak Flavonoid Levels:</b> High antioxidants protect cardiovascular health.</p></li>
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Skin Rejuvenation:</b> Boosts natural collagen production.</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-<!-- ================= MALLIKA ================= -->
-<div class="grid md:grid-cols-2 gap-10 items-stretch fade-up">
+            <!-- BANGANAPALLI -->
+            <div class="grid md:grid-cols-2 gap-12 items-center fade-up">
+                <div class="order-2 md:order-1 space-y-6">
+                    <h2 class="text-4xl font-bold text-gray-900">Banganapalli <span class="text-2xl font-light text-gray-400 block mt-1">The Southern Gold</span></h2>
+                    
+                    <p class="text-lg text-gray-600 font-light leading-relaxed">
+                        Known for its large size and obliquely oval shape, this mango features thin, edible skin and completely fiberless flesh that melts in your mouth.
+                    </p>
 
-<img src="images/mallika.jpg"
-class="w-full h-full object-cover rounded-xl shadow md:order-1">
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-xl shadow-gray-200/40">
+                        <h4 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-farvine-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Nutritional Advantage
+                        </h4>
+                        <ul class="space-y-3 text-gray-600 text-sm">
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Vitamin C Champion:</b> Exceptionally high Vitamin C boosts your immunity.</p></li>
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Heart-Healthy Electrolytes:</b> Packed with potassium to support blood pressure.</p></li>
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Natural Detoxifier:</b> Supports healthy kidney and liver function.</p></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="order-1 md:order-2 relative group">
+                    <div class="absolute inset-0 bg-yellow-400 rounded-[2rem] transform rotate-3 scale-105 opacity-30 group-hover:rotate-6 transition duration-500"></div>
+                    <img src="images/banganapalli.jpg" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl relative z-10">
+                </div>
+            </div>
 
-<div class="flex flex-col justify-center bg-white p-6 rounded-xl shadow md:order-2">
-<h2 class="text-3xl font-bold text-orange-600 mb-4">
-Mallika – Nature’s Multivitamin
-</h2>
+            <!-- KESAR -->
+            <div class="grid md:grid-cols-2 gap-12 items-center fade-up">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-orange-400 rounded-[2rem] transform -rotate-3 scale-105 opacity-30 group-hover:-rotate-6 transition duration-500"></div>
+                    <img src="images/kesar.jpg" onerror="this.src='images/kesar.jpeg'" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl relative z-10">
+                </div>
 
-<p class="font-semibold mb-3">
-Nature’s Multivitamin in a Fruit
-</p>
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold text-gray-900">Kesar <span class="text-2xl font-light text-gray-400 block mt-1">The Golden Queen</span></h2>
+                    
+                    <p class="text-lg text-gray-600 font-light leading-relaxed">
+                        Named for its saffron (Kesar) appearance and heavenly aroma, this mango is characterized by its brilliant orange pulp and intense sweetness.
+                    </p>
 
-<ul class="space-y-2 text-gray-700 text-sm leading-relaxed">
-<li><b>Vitamin A Powerhouse:</b> Supports eye health and immune defense.</li>
-<li><b>Peak Flavonoid Levels:</b> High antioxidants protect heart health.</li>
-<li><b>Maximum Fiberless Pulp:</b> High pulp-to-stone ratio.</li>
-<li><b>Skin Rejuvenation:</b> Boosts collagen production.</li>
-<li><b>Natural Energy Reservoir:</b> Provides sustained energy.</li>
-</ul>
-</div>
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-xl shadow-gray-200/40">
+                        <h4 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-farvine-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Nutritional Advantage
+                        </h4>
+                        <ul class="space-y-3 text-gray-600 text-sm">
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Saffron Antioxidants:</b> Rich compound profile helps reduce inflammation.</p></li>
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Skin Glow Benefits:</b> Vitamin C & E working together to naturally improve skin.</p></li>
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Elite Digestive Ease:</b> Smooth, fiber-free digestion properties.</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-</div>
+            <!-- HIMAMPASAND -->
+            <div class="grid md:grid-cols-2 gap-12 items-center fade-up">
+                <div class="order-2 md:order-1 space-y-6">
+                    <div class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-bold uppercase tracking-wide">Exquisite</div>
+                    <h2 class="text-4xl font-bold text-gray-900">Himampasand <span class="text-2xl font-light text-gray-400 block mt-1">The Royal Choice</span></h2>
+                    
+                    <p class="text-lg text-gray-600 font-light leading-relaxed">
+                        A massive, premium mango with a distinct, subtle coconut and lime flavor profile. Its exceptionally thin skin and large size make it a true connoisseur's fruit.
+                    </p>
 
-<!-- ================= BANGANAPALLI ================= -->
-<div class="grid md:grid-cols-2 gap-10 items-stretch fade-up">
+                    <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-xl shadow-gray-200/40">
+                        <h4 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-farvine-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Nutritional Advantage
+                        </h4>
+                        <ul class="space-y-3 text-gray-600 text-sm">
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Iron Rich:</b> Supports healthy hemoglobin production.</p></li>
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Cooling Properties:</b> Traditionally known to have a cooling effect on the body.</p></li>
+                            <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-farvine-400 mt-1.5 shrink-0"></span><p><b>Superior Pulp Ratio:</b> Provides more edible, nutrient-dense fruit per piece.</p></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="order-1 md:order-2 relative group">
+                    <div class="absolute inset-0 bg-green-200 rounded-[2rem] transform rotate-3 scale-105 opacity-50 group-hover:rotate-6 transition duration-500"></div>
+                    <img src="images/himampasand.jpg" class="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl relative z-10">
+                </div>
+            </div>
 
-<div class="flex flex-col justify-center bg-white p-6 rounded-xl shadow">
-<h2 class="text-3xl font-bold text-orange-600 mb-4">
-Banganapalli – The King of South India
-</h2>
+        </div>
+    </section>
 
-<p class="font-semibold mb-3">
-Nature’s Gold Standard for Immunity
-</p>
+    <!-- CALL TO ACTION -->
+    <section class="py-24 bg-farvine-500 text-center px-6 fade-up">
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-6">
+            Find Your Favorite
+        </h2>
+        <p class="text-xl text-farvine-100 mb-10 font-light max-w-2xl mx-auto">
+            Ready to experience the rich flavors of our naturally grown mango varieties? Order now while the season lasts.
+        </p>
+        
+        <a href="order.html" class="glow-on-hover inline-block bg-white text-farvine-600 px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-black/20">
+            Order Your Box
+        </a>
+    </section>
 
-<ul class="space-y-2 text-gray-700 text-sm leading-relaxed">
-<li><b>Vitamin C Powerhouse:</b> High Vitamin C boosts immunity.</li>
-<li><b>Heart-Healthy Electrolytes:</b> Supports blood pressure.</li>
-<li><b>Potent Antioxidants:</b> Protects against oxidative stress.</li>
-<li><b>Superior Digestibility:</b> Gentle fiberless pulp.</li>
-<li><b>Natural Detoxifier:</b> Supports kidney function.</li>
-</ul>
-</div>
+    <div id="footer"></div>
 
-<img src="images/banganapalli.jpg"
-class="w-full h-full object-cover rounded-xl shadow">
-</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add("show");
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
 
-<!-- ================= KESAR ================= -->
-<div class="grid md:grid-cols-2 gap-10 items-stretch fade-up">
-
-<img src="images/kesar.jpeg"
-class="w-full h-full object-cover rounded-xl shadow md:order-1">
-
-<div class="flex flex-col justify-center bg-white p-6 rounded-xl shadow md:order-2">
-<h2 class="text-3xl font-bold text-orange-600 mb-4">
-Kesar – The Golden Queen
-</h2>
-
-<p class="font-semibold mb-3">
-The Golden Queen of Antioxidants
-</p>
-
-<ul class="space-y-2 text-gray-700 text-sm leading-relaxed">
-<li><b>Vitamin A Champion:</b> Supports vision.</li>
-<li><b>Saffron Antioxidants:</b> Reduce inflammation.</li>
-<li><b>Skin Glow Benefits:</b> Vitamin C & E improve skin.</li>
-<li><b>Metabolic Friendly:</b> Balanced glycemic index.</li>
-<li><b>Elite Digestive Ease:</b> Smooth digestion.</li>
-</ul>
-</div>
-
-</div>
-
-<!-- ================= HIMAMPASAND ================= -->
-<div class="grid md:grid-cols-2 gap-10 items-stretch fade-up">
-
-<div class="flex flex-col justify-center bg-white p-6 rounded-xl shadow">
-<h2 class="text-3xl font-bold text-orange-600 mb-4">
-Himampasand – The Connoisseur’s Royal Choice
-</h2>
-
-<p class="font-semibold mb-3">
-A Regal Nutritional Experience
-</p>
-
-<ul class="space-y-2 text-gray-700 text-sm leading-relaxed">
-<li><b>Vitamin A & Iron Rich:</b> Supports hemoglobin.</li>
-<li><b>Dual Antioxidants:</b> Protects heart health.</li>
-<li><b>Unique Flavor Profile:</b> Coconut & lime notes.</li>
-<li><b>Superior Pulp Ratio:</b> More edible pulp.</li>
-<li><b>Cooling Properties:</b> Supports digestion.</li>
-</ul>
-</div>
-
-<img src="images/himampasand.jpg"
-class="w-full h-full object-cover rounded-xl shadow">
-</div>
-
-</section>
-
-<div id="footer"></div>
-
-<script>
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-</script>
-
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>

@@ -1,165 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Farvine</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="js/main.js" defer></script>
-
-<style>
-.fade {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="components/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        farvine: { 50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d' },
+                        leaf: { 500: '#65a30d', 600: '#4d7c0f' }
+                    },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <script src="js/main.js" defer></script>
 </head>
 
-<body class="bg-gradient-to-b from-yellow-50 to-orange-50">
+<body class="bg-gradient-to-b from-green-50/50 to-white text-gray-800 selection:bg-farvine-200 selection:text-farvine-900 overflow-x-hidden">
 
-<div id="header"></div>
+    <div id="header"></div>
 
-<!-- HERO SECTION -->
-<section class="relative h-[60vh] flex items-center justify-center text-center text-white">
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[60vh] flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0 z-0">
+            <img src="images/main.jpeg" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-[2px]"></div>
+        </div>
 
-<img src="images/main.jpeg"
-class="absolute w-full h-full object-cover">
+        <div class="relative z-10 fade-up mt-16 px-6">
+            <p class="text-farvine-400 font-bold uppercase tracking-widest text-sm mb-3">Our Roots</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">About Farvine</h1>
+            <p class="text-xl md:text-2xl font-light italic text-gray-200 border-l-4 border-farvine-500 pl-4 py-2 inline-block">
+                Naturally Sweet. Honestly Fresh.
+            </p>
+        </div>
+    </section>
 
-<div class="absolute bg-black bg-opacity-50 w-full h-full"></div>
+    <!-- CONTENT -->
+    <section class="py-24 px-6 max-w-6xl mx-auto space-y-24">
 
-<div class="relative z-10">
-<h1 class="text-5xl font-bold mb-4">About KISANTH</h1>
-<p class="text-xl">Naturally Sweet. Honestly Fresh.</p>
-</div>
+        <!-- STORY -->
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center fade-up text-lg">
+            <div class="space-y-6">
+                <h2 class="text-4xl font-bold text-gray-900 leading-tight">
+                    Rooted in <span class="text-farvine-600">Tradition</span>, Driven by <span class="text-farvine-600">Expertise</span>.
+                </h2>
+                <p class="text-gray-600 leading-relaxed font-light">
+                    We are a friends-run farm business bringing together practical farming experience and professional expertise. Our journey started with a simple realization: the mangoes people buy in cities rarely taste like the ones we pluck fresh from our orchards.
+                </p>
+                <p class="text-gray-600 leading-relaxed font-light">
+                    With educational backgrounds in Agricultural Marketing and Supply Chain Management, we understand both the science of farming and the importance of delivering fresh produce efficiently without compromising on quality or using harmful ripening agents.
+                </p>
+            </div>
+            
+            <div class="relative group">
+                <div class="absolute inset-0 bg-farvine-400 rounded-2xl transform rotate-3 scale-105 opacity-20 group-hover:rotate-6 transition duration-500"></div>
+                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" class="rounded-2xl shadow-2xl relative z-10 w-full h-[400px] object-cover group-hover:-translate-y-2 transition duration-500">
+            </div>
+        </div>
 
-</section>
+        <!-- MISSION -->
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center fade-up text-lg">
+            
+            <div class="relative group md:order-1">
+                <div class="absolute inset-0 bg-leaf-500 rounded-2xl transform -rotate-3 scale-105 opacity-20 group-hover:-rotate-6 transition duration-500"></div>
+                <img src="https://images.unsplash.com/photo-1574226516831-e1dff420e43e" class="rounded-2xl shadow-2xl relative z-10 w-full h-[400px] object-cover group-hover:-translate-y-2 transition duration-500">
+            </div>
 
-<!-- MAIN CONTENT -->
-<section class="max-w-6xl mx-auto p-6 space-y-16">
+            <div class="space-y-6 md:order-2">
+                <h2 class="text-4xl font-bold text-gray-900 leading-tight">
+                    Our Mission
+                </h2>
+                <p class="text-2xl font-medium text-farvine-600">
+                    To deliver fresh, naturally ripened mangoes directly from our orchard to your home.
+                </p>
+                <p class="text-gray-600 leading-relaxed font-light">
+                    Unlike mass-market fruit which is often plucked prematurely and chemically treated, our mangoes are grown with immense care, harvested at the precise right maturity, and ripened naturally. This preserves their authentic taste, aroma, and profound nutritional value.
+                </p>
+            </div>
+        </div>
 
-<!-- STORY -->
-<div class="grid md:grid-cols-2 gap-10 items-center fade">
+    </section>
 
-<div>
-<h2 class="text-3xl font-bold mb-4 text-orange-600">
-Our Story
-</h2>
+    <!-- PROMISE BANNER -->
+    <section class="py-24 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 fade-up">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Promise to You</h2>
+                <p class="text-gray-500 font-light text-lg">The core values that guide every box we pack.</p>
+            </div>
 
-<p class="mb-4 text-gray-700">
-We are a friends-run farm business rooted in strong farming traditions, bringing together practical farming experience and professional expertise.
-</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="bg-white p-8 rounded-2xl shadow-xl shadow-gray-200/40 border border-gray-100 hover:-translate-y-2 transition-transform">
+                    <div class="w-12 h-12 bg-farvine-50 text-farvine-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Direct Sourcing</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Farm-fresh mangoes directly from our orchards to your doorstep.</p>
+                </div>
 
-<p class="mb-4 text-gray-700">
-With educational backgrounds in Agricultural Marketing and Supply Chain Management, we understand both the science of farming and the importance of delivering fresh produce efficiently.
-</p>
+                <div class="bg-white p-8 rounded-2xl shadow-xl shadow-gray-200/40 border border-gray-100 hover:-translate-y-2 transition-transform delay-100">
+                    <div class="w-12 h-12 bg-leaf-50 text-leaf-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">100% Natural</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Naturally ripened using traditional methods — strictly no artificial chemicals.</p>
+                </div>
 
-</div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl shadow-gray-200/40 border border-gray-100 hover:-translate-y-2 transition-transform delay-200">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Fair Value</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Transparent sourcing and fair pricing that respects both farmer and consumer.</p>
+                </div>
 
-<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
-class="rounded-xl shadow-lg">
+                <div class="bg-white p-8 rounded-2xl shadow-xl shadow-gray-200/40 border border-gray-100 hover:-translate-y-2 transition-transform delay-300">
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Careful Packing</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Expertly packed inside cushioned boxes to ensure maximum freshness on arrival.</p>
+                </div>
 
-</div>
+            </div>
+        </div>
+    </section>
 
-<!-- GOAL -->
-<div class="grid md:grid-cols-2 gap-10 items-center fade">
+    <!-- FINAL BANNER -->
+    <section class="py-20 text-center px-6 fade-up">
+        <p class="text-xl font-light text-gray-500 mb-2">From our family to your table</p>
+        <h2 class="text-4xl lg:text-5xl font-black text-gray-900 tracking-tight mb-10">
+            Pure, authentic <span class="text-transparent bg-clip-text bg-gradient-to-r from-farvine-500 to-farvine-600">mango goodness.</span>
+        </h2>
+        
+        <a href="order.html" class="glow-on-hover inline-block bg-gray-900 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-farvine-500 hover:text-white transition shadow-lg">
+            Order Your Mangoes
+        </a>
+    </section>
 
-<img src="https://images.unsplash.com/photo-1574226516831-e1dff420e43e"
-class="rounded-xl shadow-lg md:order-1">
+    <div id="footer"></div>
 
-<div class="md:order-2">
-<h2 class="text-3xl font-bold mb-4 text-orange-600">
-Our Mission
-</h2>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add("show");
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
 
-<p class="mb-4 text-gray-700 font-medium">
-Our goal is simple:
-</p>
-
-<p class="text-gray-700">
-To deliver fresh, naturally ripened mangoes directly from our orchard to your home.
-</p>
-
-<p class="mt-4 text-gray-700">
-Unlike mass-market fruit, our mangoes are grown with care, harvested at the right maturity, and ripened naturally to preserve their authentic taste and nutritional value.
-</p>
-
-</div>
-
-</div>
-
-<!-- PROMISE -->
-<div class="fade">
-
-<h2 class="text-3xl font-bold text-center mb-10 text-orange-600">
-Our Promise
-</h2>
-
-<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-
-<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-<div class="text-3xl mb-3">🌿</div>
-<p>Farm-fresh mangoes directly from orchard</p>
-</div>
-
-<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-<div class="text-3xl mb-3">🍃</div>
-<p>Naturally ripened — no artificial chemicals</p>
-</div>
-
-<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-<div class="text-3xl mb-3">🤝</div>
-<p>Transparent sourcing and fair pricing</p>
-</div>
-
-<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-<div class="text-3xl mb-3">📦</div>
-<p>Carefully packed for maximum freshness</p>
-</div>
-
-</div>
-
-</div>
-
-<!-- FINAL MESSAGE -->
-<div class="text-center mt-12 fade">
-
-<p class="text-xl font-semibold mb-4">
-From our farm to your table
-</p>
-
-<p class="text-orange-600 text-2xl font-bold">
-Pure, authentic mango goodness.
-</p>
-
-<a href="order.html"
-class="inline-block mt-6 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600">
-Order Now
-</a>
-
-</div>
-
-</section>
-
-<div id="footer"></div>
-
-<script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-});
-
-document.querySelectorAll('.fade').forEach(el => observer.observe(el));
-</script>
-
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
